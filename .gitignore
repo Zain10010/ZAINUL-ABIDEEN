@@ -39,3 +39,6 @@ Thumbs.db
 # Temporary & cache
 .cache/
 .temp/
+push.bat
+push.ps1
+
