@@ -13,8 +13,10 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
   // Lock background scroll when modal is open
   useEffect(() => {
     if (project) {
-      const originalOverflow = document.body.style.overflow;
+      const originalBodyOverflow = document.body.style.overflow;
+      const originalHtmlOverflow = document.documentElement.style.overflow;
       document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
 
       const handleKeyDown = (e: KeyboardEvent) => {
         if (e.key === 'Escape') {
@@ -24,7 +26,8 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
       window.addEventListener('keydown', handleKeyDown);
 
       return () => {
-        document.body.style.overflow = originalOverflow;
+        document.body.style.overflow = originalBodyOverflow;
+        document.documentElement.style.overflow = originalHtmlOverflow;
         window.removeEventListener('keydown', handleKeyDown);
       };
     }
@@ -34,14 +37,14 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
   return createPortal(
     <AnimatePresence>
-      <div className="fixed inset-0 z-[150] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+      <div className="fixed inset-0 z-[200] flex items-center justify-center p-3 sm:p-6 overflow-hidden">
         {/* Full-screen Dark Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 bg-black/85 backdrop-blur-md"
+          className="fixed inset-0 bg-black/90 backdrop-blur-md"
         />
 
         {/* Modal Window Card - Solid Background & High Stacking Order */}
@@ -50,7 +53,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-          className="relative w-full max-w-4xl bg-[#101218] border border-white/20 rounded-3xl overflow-hidden shadow-2xl z-10 my-8 max-h-[90vh] flex flex-col"
+          className="relative w-full max-w-4xl bg-[#101218] border border-white/20 rounded-3xl overflow-hidden shadow-2xl z-10 max-h-[92vh] flex flex-col overscroll-contain"
         >
           {/* Header Bar */}
           <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#151820] shrink-0">
@@ -70,7 +73,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </div>
 
           {/* Modal Content Body */}
-          <div className="p-6 sm:p-8 overflow-y-auto space-y-6">
+          <div className="p-6 sm:p-8 overflow-y-auto space-y-6 flex-1 overscroll-contain">
             
             {/* Project Image Preview */}
             <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-[#0D1017] aspect-[16/9] sm:aspect-[21/9]">
