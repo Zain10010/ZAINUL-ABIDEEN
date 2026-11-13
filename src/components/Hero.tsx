@@ -149,13 +149,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                 {/* Fallback & Portrait Rendering */}
                 {!imageError ? (
                   <img
-                    src="/images/zain-profile.jpeg"
+                    src="/images/zain-profile.png"
                     alt="Zainul Abideen N K P"
                     onLoad={() => setImageLoaded(true)}
                     onError={() => {
-                      // Fallback to .jpg if .jpeg fails
+                      // Fallback chain: .png -> .jpeg -> .jpg -> placeholder
                       const img = document.getElementById('hero-portrait-img') as HTMLImageElement;
-                      if (img && img.src.endsWith('.jpeg')) {
+                      if (img && img.src.endsWith('.png')) {
+                        img.src = '/images/zain-profile.jpeg';
+                      } else if (img && img.src.endsWith('.jpeg')) {
                         img.src = '/images/zain-profile.jpg';
                       } else {
                         setImageError(true);
