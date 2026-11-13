@@ -1,6 +1,11 @@
 # ⚡ Zainul Abideen N K P — Personal Portfolio Website
 
-A personal personal portfolio website built for **Zainul Abideen N K P (Zain)** — AI/ML Engineer, Python Developer, and Quantum Computing Researcher.
+[![Live Deployment](https://img.shields.io/badge/Live_Site-zainul--abideen.vercel.app-6285FF?style=for-the-badge&logo=vercel)](https://zainul-abideen.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-Zain10010-00F0FF?style=for-the-badge&logo=github)](https://github.com/Zain10010/ZAINUL-ABIDEEN)
+
+A premium dark luxury personal portfolio website built for **Zainul Abideen N K P (Zain)** — AI/ML Engineer, Python Developer, and Quantum Computing Researcher.
+
+🌐 **Live URL**: [https://zainul-abideen.vercel.app/](https://zainul-abideen.vercel.app/)
 
 Built with **React.js**, **Vite**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**.
 
