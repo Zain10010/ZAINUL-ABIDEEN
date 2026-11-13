@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="sgpaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#6285FF" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" rx="16" fill="#0D1017" />
+
+  <g transform="translate(180, 50)">
+    <rect width="440" height="400" rx="16" fill="#151820" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" />
+    
+    <rect x="25" y="25" width="390" height="100" rx="12" fill="#0D1017" stroke="rgba(98,133,255,0.3)" />
+    <text x="45" y="55" font-family="sans-serif" font-size="12" fill="#A1A1AA">VTU GRADING SYSTEM // RESULT</text>
+    <text x="45" y="105" font-family="sans-serif" font-size="42" font-weight="bold" fill="#10B981">9.42</text>
+    <text x="165" y="102" font-family="sans-serif" font-size="18" font-weight="600" fill="#A1A1AA">SGPA // First Class Distinction</text>
+
+    <g transform="translate(25, 145)">
+      <rect width="390" height="44" rx="8" fill="#1C212D" />
+      <text x="20" y="27" font-family="sans-serif" font-size="13" fill="#FFF">21AI41 - Design &amp; Analysis of Algorithms</text>
+      <rect x="330" y="10" width="45" height="24" rx="4" fill="#10B981" opacity="0.2" />
+      <text x="352" y="26" font-family="sans-serif" font-size="12" font-weight="bold" fill="#10B981" text-anchor="middle">O</text>
+    </g>
+
+    <g transform="translate(25, 200)">
+      <rect width="390" height="44" rx="8" fill="#1C212D" />
+      <text x="20" y="27" font-family="sans-serif" font-size="13" fill="#FFF">21AI42 - Machine Learning Foundations</text>
+      <rect x="330" y="10" width="45" height="24" rx="4" fill="#6285FF" opacity="0.2" />
+      <text x="352" y="26" font-family="sans-serif" font-size="12" font-weight="bold" fill="#6285FF" text-anchor="middle">A+</text>
+    </g>
+
+    <g transform="translate(25, 255)">
+      <rect width="390" height="44" rx="8" fill="#1C212D" />
+      <text x="20" y="27" font-family="sans-serif" font-size="13" fill="#FFF">21AI43 - Operating Systems &amp; Kernels</text>
+      <rect x="330" y="10" width="45" height="24" rx="4" fill="#6285FF" opacity="0.2" />
+      <text x="352" y="26" font-family="sans-serif" font-size="12" font-weight="bold" fill="#6285FF" text-anchor="middle">A+</text>
+    </g>
+
+    <rect x="25" y="325" width="390" height="48" rx="10" fill="url(#sgpaGrad)" />
+    <text x="220" y="355" font-family="sans-serif" font-size="15" font-weight="bold" fill="#FFF" text-anchor="middle">Recalculate SGPA &amp; CGPA</text>
+  </g>
+</svg>

@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #08090D;
+    color: #F5F5F5;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom luxury scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #08090D;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1F2432;
+    border-radius: 4px;
+    border: 1px solid rgba(98, 133, 255, 0.2);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6285FF;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 24px rgba(98, 133, 255, 0.5);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-[#E0E7FF] to-[#6285FF];
+  }
+
+  .text-gradient-electric {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#6285FF] via-[#8CA6FF] to-[#00F0FF];
+  }
+
+  .glass-card {
+    background: rgba(21, 24, 32, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .glass-card-hover:hover {
+    background: rgba(25, 29, 40, 0.85);
+    border-color: rgba(98, 133, 255, 0.35);
+    box-shadow: 0 10px 30px -10px rgba(98, 133, 255, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .bento-card {
+    background: #151820;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 1.25rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .bento-card:hover {
+    border-color: rgba(98, 133, 255, 0.3);
+    box-shadow: 0 12px 36px -12px rgba(98, 133, 255, 0.15);
+  }
+
+  .cyber-grid {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  }
+  
+  .radial-glow {
+    background: radial-gradient(circle at 50% 50%, rgba(98, 133, 255, 0.15) 0%, transparent 70%);
+  }
+}
+

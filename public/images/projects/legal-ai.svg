@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="legalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="50%" stop-color="#6285FF" />
+      <stop offset="100%" stop-color="#00F0FF" />
+    </linearGradient>
+    <linearGradient id="userBubble" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2333" />
+      <stop offset="100%" stop-color="#141824" />
+    </linearGradient>
+    <linearGradient id="botBubble" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#131B2E" />
+      <stop offset="100%" stop-color="#0E1626" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="500" rx="16" fill="#0D1017" />
+
+  <!-- Outer Window Frame -->
+  <g transform="translate(60, 45)">
+    <!-- Container Card -->
+    <rect width="680" height="410" rx="14" fill="#151820" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
+    
+    <!-- Titlebar -->
+    <rect width="680" height="42" rx="14" fill="#1B202D" />
+    <circle cx="26" cy="21" r="5.5" fill="#EF4444" />
+    <circle cx="44" cy="21" r="5.5" fill="#F59E0B" />
+    <circle cx="62" cy="21" r="5.5" fill="#10B981" />
+    <rect x="100" y="11" width="340" height="20" rx="10" fill="#0D1017" />
+    <text x="120" y="25" font-family="'JetBrains Mono', monospace" font-size="10" fill="#71717A">legal-assistant.vercel.app/ipc-advisor</text>
+
+    <!-- Top Badge Row -->
+    <g transform="translate(480, 11)">
+      <rect width="175" height="20" rx="10" fill="#6285FF" fill-opacity="0.15" stroke="#6285FF" stroke-opacity="0.3" />
+      <text x="87" y="14" font-family="'Inter', sans-serif" font-size="10" font-weight="bold" fill="#6285FF" text-anchor="middle">Llama 3.1 &#8226; Groq LPU</text>
+    </g>
+
+    <!-- User Query Bubble -->
+    <g transform="translate(30, 65)">
+      <rect width="620" height="85" rx="12" fill="url(#userBubble)" stroke="rgba(255,255,255,0.06)" />
+      <circle cx="30" cy="30" r="14" fill="#8B5CF6" fill-opacity="0.2" stroke="#8B5CF6" stroke-opacity="0.4" />
+      <text x="30" y="34" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#A78BFA" text-anchor="middle">Q</text>
+      
+      <text x="56" y="28" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#A78BFA">Citizen Query (Indian Penal Code):</text>
+      <text x="56" y="48" font-family="'Inter', sans-serif" font-size="12" fill="#E4E4E7">"Explain Section 420 of IPC, required elements of fraud, and bail provisions."</text>
+      <text x="56" y="68" font-family="'JetBrains Mono', monospace" font-size="10" fill="#71717A">Language: English &#8226; Mode: Multilingual Legal Interpretation</text>
+    </g>
+
+    <!-- AI Response Bubble -->
+    <g transform="translate(30, 165)">
+      <rect width="620" height="155" rx="12" fill="url(#botBubble)" stroke="rgba(98,133,255,0.3)" />
+      <circle cx="30" cy="30" r="14" fill="#00F0FF" fill-opacity="0.2" stroke="#00F0FF" stroke-opacity="0.4" />
+      <text x="30" y="34" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#00F0FF" text-anchor="middle">AI</text>
+      
+      <text x="56" y="28" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#00F0FF">AI Legal Assistant &#8212; IPC Analysis &amp; Guidance</text>
+      
+      <!-- Key Legal Insights -->
+      <text x="56" y="52" font-family="'Inter', sans-serif" font-size="12" fill="#F4F4F5">&#8226; Section 420: Cheating &amp; dishonestly inducing delivery of property.</text>
+      <text x="56" y="74" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">&#8226; Penalty: Imprisonment extending up to 7 years along with mandatory fine.</text>
+      <text x="56" y="96" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">&#8226; Classification: Cognizable, non-bailable offense triable by Magistrate of the 1st Class.</text>
+
+      <!-- Latency & Speed Badge -->
+      <g transform="translate(56, 114)">
+        <rect width="130" height="24" rx="6" fill="#10B981" fill-opacity="0.15" stroke="#10B981" stroke-opacity="0.3" />
+        <text x="65" y="16" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" fill="#34D399" text-anchor="middle">Inference: 240ms</text>
+      </g>
+      <g transform="translate(196, 114)">
+        <rect width="150" height="24" rx="6" fill="#6285FF" fill-opacity="0.15" stroke="#6285FF" stroke-opacity="0.3" />
+        <text x="75" y="16" font-family="'Inter', sans-serif" font-size="10" font-weight="bold" fill="#8CA6FF" text-anchor="middle">Summarized &amp; Translated</text>
+      </g>
+    </g>
+
+    <!-- Bottom Action Bar -->
+    <g transform="translate(30, 335)">
+      <rect width="620" height="55" rx="10" fill="#0E121B" stroke="rgba(255,255,255,0.05)" />
+      <rect x="15" y="13" width="450" height="28" rx="6" fill="#151A26" />
+      <text x="30" y="31" font-family="'Inter', sans-serif" font-size="11" fill="#52525B">Ask follow-up IPC section or case law question...</text>
+      <rect x="480" y="13" width="125" height="28" rx="6" fill="url(#legalGrad)" />
+      <text x="542" y="31" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#FFF" text-anchor="middle">Send Query &#8594;</text>
+    </g>
+  </g>
+</svg>

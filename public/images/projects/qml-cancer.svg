@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="qmlGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6285FF" />
+      <stop offset="50%" stop-color="#8CA6FF" />
+      <stop offset="100%" stop-color="#00F0FF" />
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6285FF" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="transparent" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" rx="16" fill="#0D1017" />
+  <rect x="0" y="0" width="800" height="500" fill="url(#coreGlow)" />
+  
+  <g opacity="0.25" stroke="#6285FF" stroke-width="1.5" fill="none">
+    <path d="M50 100 H250 L300 150 H500 L550 100 H750" />
+    <path d="M50 400 H200 L260 340 H540 L600 400 H750" />
+    <path d="M150 50 V450 M650 50 V450" stroke-dasharray="4 8" />
+  </g>
+
+  <g transform="translate(400, 240)">
+    <ellipse cx="0" cy="0" rx="180" ry="65" fill="none" stroke="url(#qmlGrad)" stroke-width="2.5" opacity="0.8" transform="rotate(-20)" />
+    <ellipse cx="0" cy="0" rx="180" ry="65" fill="none" stroke="#00F0FF" stroke-width="2" opacity="0.7" transform="rotate(40)" />
+    <ellipse cx="0" cy="0" rx="180" ry="65" fill="none" stroke="#8CA6FF" stroke-width="2" opacity="0.6" transform="rotate(95)" />
+    
+    <circle cx="0" cy="0" r="38" fill="#151820" stroke="url(#qmlGrad)" stroke-width="3" />
+    <circle cx="0" cy="0" r="18" fill="#6285FF" opacity="0.9" />
+    <text x="0" y="6" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">|ψ⟩</text>
+    
+    <circle cx="-140" cy="-40" r="12" fill="#00F0FF" opacity="0.8" />
+    <circle cx="150" cy="30" r="10" fill="#6285FF" opacity="0.8" />
+    <circle cx="30" cy="-110" r="11" fill="#8CA6FF" opacity="0.8" />
+    <circle cx="-40" cy="120" r="9" fill="#00F0FF" opacity="0.8" />
+  </g>
+
+  <rect x="30" y="30" width="280" height="36" rx="8" fill="#151820" stroke="rgba(255,255,255,0.1)" />
+  <text x="45" y="53" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#00F0FF">RESEARCH // FLAGSHIP PROJECT</text>
+  <text x="45" y="450" font-family="'Inter', sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Quantum Machine Learning (QSVM + VQC)</text>
+  <text x="45" y="475" font-family="'Inter', sans-serif" font-size="13" fill="#A1A1AA">Biomedical RNA Clinical Prediction // Qiskit &amp; PennyLane</text>
+</svg>
