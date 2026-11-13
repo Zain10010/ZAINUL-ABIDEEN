@@ -13,6 +13,7 @@ export interface Project {
   image: string;
   githubUrl?: string;
   liveDemoUrl?: string;
+  reportPdfUrl?: string;
   hasInteractiveModal?: boolean;
 }
 
@@ -57,35 +58,38 @@ export const projectsData: Project[] = [
   {
     id: "qml-cancer-immunotherapy",
     title: "Quantum Machine Learning for Cancer Immunotherapy Outcome Prediction",
-    subtitle: "Hybrid Quantum-Classical Modeling for Biomedical RNA Clinical Prediction",
+    subtitle: "Hybrid Quantum-Classical Modeling for Biomedical RNA Clinical Prediction (VTU Project)",
     badge: "Research Flagship",
     category: "Quantum ML",
     featured: true,
     description:
-      "Designed hybrid Quantum Machine Learning models to predict cancer patient response to immunotherapy using biomedical RNA clinical data.",
+      "A comprehensive academic investigation comparing Variational Quantum Classifiers (VQC) and Quantum Support Vector Machines (QSVM) against classical ML for immune phenotype classification on TCGA (N=201) and IMvigor210 (N=298) cohorts.",
     fullOverview:
-      "Cancer immunotherapy efficacy (e.g., anti-PD-1/CTLA-4 checkpoint inhibitors) is heavily dictated by high-dimensional transcriptomic variations. This project pioneers hybrid quantum-classical algorithms. High-dimensional clinical RNA feature vectors are mapped into quantum Hilbert space via parameterized quantum feature maps (ZZFeatureMap). Both Quantum Support Vector Machines (QSVM) and Variational Quantum Circuits (VQC) with parameterized rotation gates (Ansatz) were engineered and benchmarked against classical machine learning models, achieving improved prediction accuracy.",
+      "Cancer immunotherapy efficacy (anti-PD-1/CTLA-4 checkpoint inhibitors) is dictated by complex, high-dimensional transcriptomic variations. Conducted as an official B.E. AIML miniproject at Yenepoya Institute of Technology (VTU) under the guidance of Prof. Abinas V, this study presents a rigorous comparative benchmark of QML models against optimized classical gradient boosting and deep tabular baselines. Using TCGA lung cancer (N=201) with non-circular surrogate labels and independent external validation on the IMvigor210 cohort (N=298), QSVM achieved a competitive ROC-AUC of 0.90 ± 0.02, confirming the biological feasibility of quantum kernel methods while delineating the boundaries of NISQ-era quantum advantage.",
     myContribution:
-      "Designed the hybrid quantum-classical pipeline using Qiskit and PennyLane, formulated quantum kernel evaluation methods, preprocessed high-dimensional clinical RNA datasets, and conducted rigorous benchmark comparisons with classical models.",
+      "Engineered the hybrid quantum-classical pipeline with Qiskit and PennyLane, implemented ZZFeatureMap quantum kernel state projections and 4-qubit RealAmplitudes VQC circuits, conducted 10,000-iteration bootstrap statistical tests, and co-authored the official 30-page VTU technical project report.",
     keyHighlights: [
-      "Quantum Support Vector Machine (QSVM) utilizing quantum kernel tricks in Hilbert space",
-      "Variational Quantum Circuits (VQC) with parameterized rotation and entangling CNOT gates",
-      "Hybrid Quantum-Classical Optimization loop using classical gradient descent (COBYLA/Adam)",
-      "High-dimensional biomedical RNA clinical dataset processing and dimensionality reduction",
-      "Empirical benchmark comparison verifying improved prediction accuracy over classical baselines"
+      "Quantum Support Vector Machine (QSVM) with ZZFeatureMap kernel achieving ROC-AUC 0.90 ± 0.02 on TCGA primary cohort",
+      "Variational Quantum Classifier (VQC) with 4-qubit RealAmplitudes parameterized ansatz and COBYLA optimization (ROC-AUC 0.81 ± 0.02)",
+      "Independent real-world external validation on IMvigor210 immunotherapy cohort (N=298) assessing clinical generalizability",
+      "Rigorous statistical validation: nested 5-fold cross-validation, Bonferroni significance correction, and 10,000 bootstrap iterations (p=0.18 vs XGBoost)",
+      "Mechanistic biological interpretation confirming CD8+ T cells, cytotoxic lymphocytes, and NK cells as dominant predictive biomarkers",
+      "Official 30-page VTU Engineering Research Report submitted to Yenepoya Institute of Technology (2025-26)"
     ],
     technologies: [
       "Python",
-      "PennyLane",
       "Qiskit",
+      "PennyLane",
       "Scikit-learn",
-      "NumPy",
-      "Pandas",
-      "RNA Clinical Dataset"
+      "PyTorch",
+      "XGBoost",
+      "TCGA Cohort",
+      "IMvigor210"
     ],
     image: "/images/projects/qml-cancer.svg",
     githubUrl: "https://github.com/Zain10010/quantum-ml-cancer-immunotherapy",
     liveDemoUrl: "#research",
+    reportPdfUrl: "/docs/Immunotherapy_Response_Prediction_QML_Report.pdf",
     hasInteractiveModal: true
   },
   {

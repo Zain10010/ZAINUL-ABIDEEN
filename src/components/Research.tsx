@@ -11,7 +11,8 @@ import {
   Binary,
   Compass,
   FileCode2,
-  BarChart2
+  BarChart2,
+  FileText
 } from 'lucide-react';
 import { researchData } from '../data/research';
 import { SpotlightCard } from './SpotlightCard';
@@ -78,7 +79,16 @@ export const Research: React.FC = () => {
                 </p>
               </div>
 
-              <div className="shrink-0 flex items-center gap-3">
+              <div className="shrink-0 flex flex-wrap items-center gap-3">
+                <a
+                  href="/docs/Immunotherapy_Response_Prediction_QML_Report.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#6285FF] hover:bg-[#4F73EB] text-xs font-semibold text-white transition-all shadow-electric-sm active:scale-95"
+                >
+                  <FileText className="w-4 h-4" />
+                  <span>Read 30-Page Report (PDF)</span>
+                </a>
                 <div className="px-4 py-2 rounded-xl bg-[#08090D] border border-white/10 text-center">
                   <span className="text-[10px] font-mono text-[#71717A] block">Toolkit</span>
                   <span className="text-xs font-mono font-bold text-[#00F0FF]">Qiskit &bull; PennyLane</span>

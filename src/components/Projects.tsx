@@ -8,7 +8,8 @@ import {
   Sparkles,
   ArrowRight,
   Code2,
-  CheckCircle2
+  CheckCircle2,
+  FileText
 } from 'lucide-react';
 import { projectsData, Project } from '../data/projects';
 import { ProjectModal } from './ProjectModal';
@@ -219,6 +220,17 @@ export const Projects: React.FC = () => {
                   </button>
 
                   <div className="flex items-center gap-2">
+                    {project.reportPdfUrl && (
+                      <a
+                        href={project.reportPdfUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-lg bg-[#6285FF]/15 hover:bg-[#6285FF]/25 border border-[#6285FF]/40 text-[#8CA6FF] hover:text-white transition-colors"
+                        title="Read Official VTU Project Report (PDF)"
+                      >
+                        <FileText className="w-3.5 h-3.5" />
+                      </a>
+                    )}
                     {project.githubUrl && (
                       <a
                         href={project.githubUrl}
